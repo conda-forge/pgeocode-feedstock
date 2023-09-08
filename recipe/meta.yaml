@@ -1,5 +1,5 @@
 {% set name = "pgeocode" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pgeocode-{{ version }}.tar.gz
-  sha256: 60fc2bad60aa161c3cf46ace4fde607b77e016b1e2a25470534163305499e55e
+  sha256: 08f35dedf79957769641c7137aa9cc189e1bb63033226372dce372b14973e8b2
 
 build:
   number: 0

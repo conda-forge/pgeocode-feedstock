@@ -1,11 +1,11 @@
-About pgeocode
-==============
+About pgeocode-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pgeocode-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pgeocode/
 
 Package license: BSD-1-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pgeocode-feedstock/blob/main/LICENSE.txt)
 
 Summary: Approximate geocoding
 
