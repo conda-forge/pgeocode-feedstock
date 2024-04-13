@@ -35,6 +35,7 @@ test:
     - pip
 
 about:
+  home: https://pypi.org/project/pgeocode/
   summary: Postal code geocoding
   license: BSD-3-Clause
   license_file: LICENSE
