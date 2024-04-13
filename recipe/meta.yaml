@@ -1,7 +1,6 @@
 {% set name = "pgeocode" %}
 {% set version = "0.5.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,19 +10,21 @@ source:
   sha256: 37d6caf74e9f2b1e69762811953df5b43fe7f1806833c83bf85a60dd784dff9e
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.10
+    - setuptools >=42
+    - wheel
     - pip
-    - python >=3.8
   run:
+    - python >=3.10
+    - requests
     - numpy
     - pandas
-    - python >=3.8
-    - requests
 
 test:
   imports:
@@ -34,9 +35,8 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/pgeocode/
-  summary: Approximate geocoding
-  license: BSD-1-Clause
+  summary: Postal code geocoding
+  license: BSD-3-Clause
   license_file: LICENSE
 
 extra:
