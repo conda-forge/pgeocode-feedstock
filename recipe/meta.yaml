@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "pgeocode" %}
 {% set version = "0.5.0" %}
 
@@ -6,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pgeocode-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pgeocode-{{ version }}.tar.gz
   sha256: 37d6caf74e9f2b1e69762811953df5b43fe7f1806833c83bf85a60dd784dff9e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=42
     - wheel
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - requests
     - numpy
     - pandas
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pgeocode/
