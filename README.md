@@ -5,9 +5,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pgeocode-feedst
 
 Home: https://pypi.org/project/pgeocode/
 
-Package license: BSD-1-Clause
+Package license: BSD-3-Clause
 
-Summary: Approximate geocoding
+Summary: Postal code geocoding
 
 Current build status
 ====================
